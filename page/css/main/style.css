@@ -149,7 +149,7 @@ input[type=checkbox]:checked + label:before {
 #result {
     position: relative;
 	width: 530px;
-	left: 300px;
+	left: 30px;
 	top: 45px;
 	z-index: 1;
 	/* box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.651); */
