@@ -42,7 +42,7 @@ function displayResult(sortedItems) {
 
         const itemDiv = document.createElement('div');
         itemDiv.innerHTML = `
-        <img id="photos" src="${photoUrl}" alt="${name}" height="400" width="330"><br>
+        <img id="photos" src="${photoUrl}" alt="${name}" height="400" width="300"><br>
         <style>
         
         @keyframes fadeOut {
