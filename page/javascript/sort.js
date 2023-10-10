@@ -38,11 +38,11 @@ function displayResult(sortedItems) {
 
     sortedItems.forEach((item) => {
         const name = item; // You can modify this to get the actual name based on the item if needed
-        const photoUrl = `img/photos/${item}.JPG`; // Assuming photos are named after the items
+        const photoUrl = `img/photos2/${item}.JPG`; // Assuming photos are named after the items
 
         const itemDiv = document.createElement('div');
         itemDiv.innerHTML = `
-        <img id="photos2" src="${photoUrl}" alt="${name}" height= "330" width="330"><br><br><br>
+        <img id="photos" src="${photoUrl}" alt="${name}" height= "330" width="330"><br><br><br>
         <style>
         
         @keyframes fadeOut {
