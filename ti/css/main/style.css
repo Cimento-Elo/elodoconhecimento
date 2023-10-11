@@ -1,0 +1,225 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-fundo1: #F5F0DD;
+    --cor-fundo2: #2b3455;
+    --cor-letras01: #2b3455;
+    --cor-letras02: #2CBA80;  
+}
+
+html,
+body {
+    width: 1365px;
+    height: 860px;;
+    background-color: var(--cor-fundo2);
+}
+
+
+/* main style */
+
+main {
+    position: relative;
+    left: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 1365px;
+    height: 860px;
+    
+    
+}
+
+#fundo {
+    position: absolute;
+    width: 1365px;    
+    height: 100vh;
+    left: 400px;
+    top: 0px;
+    opacity: 50%;    
+}
+
+/* form style */
+
+#sort {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50%;
+    height: 1000px;
+}
+form {
+    width: 600px;
+    height: 100vh;
+    z-index: 1;
+    font-size: 50px;
+    color: var(--cor-letras01);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#sort fieldset {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 700px;
+    top: 45px;
+    border-style: none;
+    gap: 50px;
+    background-color: white;
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+    box-shadow: 3px 3px 10px black;
+}
+
+fieldset ul {
+    padding-top: 100px;
+    text-align: Left;
+}
+
+.bton {
+    position: relative;
+    top: 60px;
+    width: 100%;
+    height: 55px;
+    z-index: 1;
+    color: var(--cor-letras02);
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: var(--cor-letras01);
+    border: none;
+    border-top-right-radius: 35px;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+}
+
+.bton:hover {
+    color: black;
+    font-size: 30px;
+    background: linear-gradient(
+        45deg,
+        black 10%,
+        var(--cor-letras02),        
+        black        
+        );
+        transition: 0.6s;   
+        box-shadow: 3px 3px 10px #2CBA80;
+        cursor: pointer;      
+    } 
+    
+    .bton:active{
+        color: white;
+        background: linear-gradient(
+            45deg,
+        black 10%,
+        var(--cor-fundo2),        
+        black        
+        );
+    }
+    
+    
+    li {
+        list-style: none;
+        padding: 3px;
+    }
+    
+    fieldset label {
+        cursor: pointer;
+    }
+
+    #capa {
+        width: 50%;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox]:checked + label:before {
+    content: "\2713";  
+    color: var(--cor-letras02);     
+}
+
+#result {
+    position: relative;
+	width: 530px;
+	left: 30px;
+	top: 45px;
+	z-index: 1;
+	/* box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.651); */
+}
+
+h3 {
+    text-align: center;
+}
+
+#contador {
+    font-size: 100px;
+    top: 300px;
+    position: relative;
+    color: var(--cor-letras02);   
+    z-index: 1;
+}
+
+/* header style 
+header {
+    width: 1346px;
+    height: 114px;
+    text-align: center;
+}*/
+
+/*
+#img_header {
+    display: inline-block;
+    position: relative;    
+}*/
+
+/*
+#img_header label {
+    position: absolute;
+    top: 40px;
+    width: 1346px;
+    color: var(--cor-letras01);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+*/
+
+/*
+#sorteados {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    top: 30px;
+    animação para os nomes aparecerem 
+}*/
+
+/*
+.orador1, .orador2 {
+    font-size: 28px ;
+    text-align: center;
+    border: none;
+    background:none;
+    color: black;
+}*/
+
+/*
+#o01, #o02 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.651);
+    width: 280px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}*/
