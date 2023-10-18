@@ -55,7 +55,7 @@ form {
     width: 600px;
     height: 100vh;
     z-index: 1;
-    font-size: 20px;
+    font-size: 40px;
     color: var(--cor-letras01);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -66,7 +66,7 @@ form {
     flex-direction: row;
     justify-content: center;
     height: 700px;
-    top: 20px;
+    top: 45px;
     border-style: none;
     gap: 50px;
     background-color: white;
@@ -78,7 +78,7 @@ form {
 }
 
 fieldset ul {
-    padding-top: 50px;
+    padding-top: 20px;
     text-align: Left;
 }
 
