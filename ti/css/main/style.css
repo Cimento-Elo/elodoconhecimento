@@ -160,7 +160,7 @@ h3 {
 }
 
 #contador {
-    font-size: 100px;
+    font-size: 75px;
     top: 300px;
     position: relative;
     color: var(--cor-letras02);   
