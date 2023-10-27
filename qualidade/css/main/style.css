@@ -55,7 +55,7 @@ form {
     width: 600px;
     height: 100vh;
     z-index: 1;
-    font-size: 40px;
+    font-size: 30px;
     color: var(--cor-letras01);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
