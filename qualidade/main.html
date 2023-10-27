@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title> ELO DO CONHECIMENTO </title>
+    <link href="./css/main/style.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+         <!-- <header>
+            <figure id="img_header">
+                <label>
+                    <h1>SORTEIO DOS ORADORES DO DIA</h1>
+                </label>
+                <img src="./Header_bk.jpg" width="1349px" height="114px" alt="cabecalho"/>        
+            </figure>
+        </header> -->   
+    <main>
+        
+        <div id="sort">
+            <form action="submit">
+                <fieldset>
+                    <ul>
+			            <li><input id="chkbox01" type="checkbox" name="item" value="Luciana Cléia"   /><label for="chkbox01">Luciana Cléia</label></li> 
+			            <li><input id="chkbox02" type="checkbox" name="item" value="Daniella"        /><label for="chkbox02">Daniella</label></li>					
+			            <li><input id="chkbox03" type="checkbox" name="item" value="Heytor"          /><label for="chkbox03">Heytor</label></li>               
+                        <li><input id="chkbox04" type="checkbox" name="item" value="David"           /><label for="chkbox04">David</label></li>
+                        <li><input id="chkbox05" type="checkbox" name="item" value="Simone"          /><label for="chkbox05">Simone</label></li>
+                        <li><input id="chkbox06" type="checkbox" name="item" value="Ítalo"           /><label for="chkbox06">Ítalo</label></li>
+                        <li><input id="chkbox07" type="checkbox" name="item" value="José Djeyzon"    /><label for="chkbox07">José Djeyzon</label></li>
+                        <li><input id="chkbox08" type="checkbox" name="item" value="Bárbara"         /><label for="chkbox08">Bárbara</label></li>                   
+                    </ul>
+                </fieldset>
+                <div class="btn">
+                    <input class="bton" onclick="sortRandomly2()" id="sortear" type="button" name="botao" value="SORTEAR 1 PESSOA" />
+                </div>
+                <div class="btn">
+                    <input class="bton" onclick="sortRandomly()" id="sortear" type="button" name="botao" value="SORTEAR 2 PESSOAS" />
+                </div>
+            </form>
+        </div>
+        <div id="result">
+            <div id="contador"></div>
+        </div>
+    </main>
+    <img id="fundo" src="./img/background/main/Fundo_page-0003.png" />
+    <script src="./javascript/sort.js"></script>
+    <script src="./javascript/sort2.js"></script>
+  
+</body>
+
+</html>
