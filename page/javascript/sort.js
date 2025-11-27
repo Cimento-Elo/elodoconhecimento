@@ -28,20 +28,15 @@ function displayResult(sortedItems) {
     sortedItems.forEach(item => {
         const name = item;
         const photoUrl = `img/photos2/${item}.JPG`;
-        const defaultPhoto = "img/default.png";  // <- Colocar imagem padrão nessa pasta
+        const defaultPhoto = "img/default.png";  // <- precisa existir
 
         const itemDiv = document.createElement('div');
-        itemDiv.classList.add("card");
-
         itemDiv.innerHTML = `
             <div class="personBox">
-                <img class="photo" src="${photoUrl}" alt="${name}" 
-                     onerror="this.src='${defaultPhoto}'">
-
+                <img class="photo" src="${photoUrl}" onerror="this.src='${defaultPhoto}'">
                 <div class="personName">${name}</div>
             </div>
         `;
-
         resultContainer.appendChild(itemDiv);
     });
 }
