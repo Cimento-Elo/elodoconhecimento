@@ -7,7 +7,6 @@ function sortRandomly() {
     }
 
     const selectedItems = Array.from(checkboxes).map(c => c.value);
-
     const shuffledItems = shuffleArray(selectedItems);
 
     displayResult(shuffledItems.slice(0, 2));
@@ -26,30 +25,21 @@ function displayResult(sortedItems) {
     const resultContainer = document.getElementById('result');
     resultContainer.innerHTML = '';
 
-    sortedItems.forEach((item) => {
+    sortedItems.forEach(item => {
         const name = item;
         const photoUrl = `img/photos2/${item}.JPG`;
+        const defaultPhoto = "img/default.png";  // <- Colocar imagem padrão nessa pasta
 
         const itemDiv = document.createElement('div');
+        itemDiv.classList.add("card");
 
         itemDiv.innerHTML = `
-            <img id="photos" src="${photoUrl}" alt="${name}" height="400" width="300"
-                 onerror="this.style.display='none'; this.parentNode.innerHTML='<h2 style=\'font-size:45px;font-weight:bold;text-align:center;margin-top:80px;\'>${name}</h2>';">
-            
-            <style>
-                @keyframes fadeOut {
-                    0% { opacity: 0; }
-                    100% { opacity: 1; }
-                }
+            <div class="personBox">
+                <img class="photo" src="${photoUrl}" alt="${name}" 
+                     onerror="this.src='${defaultPhoto}'">
 
-                #photos {
-                    border-radius: 50px;
-                    justify-content: center;
-                    box-shadow: 3px 3px 10px black;
-                    opacity: 0;
-                    animation: fadeOut 5s ease-in-out forwards; 
-                }
-            </style>
+                <div class="personName">${name}</div>
+            </div>
         `;
 
         resultContainer.appendChild(itemDiv);
