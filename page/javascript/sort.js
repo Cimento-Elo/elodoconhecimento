@@ -1,6 +1,4 @@
-
 function sortRandomly() {
-    // Get all selected checkboxes
     const checkboxes = document.querySelectorAll('input[name="item"]:checked');
 
     if (checkboxes.length < 2) {
@@ -8,22 +6,14 @@ function sortRandomly() {
         return;
     }
 
-    // Create an array to hold selected items
-    const selectedItems = [];
+    const selectedItems = Array.from(checkboxes).map(c => c.value);
 
-    checkboxes.forEach((checkbox) => {
-        selectedItems.push(checkbox.value);
-    });
-
-    // Randomly shuffle the selected items
     const shuffledItems = shuffleArray(selectedItems);
 
-    // Display the result
-    displayResult(shuffledItems.slice(0, 2)); // Display the first two sorted items
+    displayResult(shuffledItems.slice(0, 2));
 }
 
 function shuffleArray(array) {
-    // Randomly shuffle the array using the Fisher-Yates algorithm
     const shuffled = array.slice();
     for (let i = shuffled.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -37,36 +27,31 @@ function displayResult(sortedItems) {
     resultContainer.innerHTML = '';
 
     sortedItems.forEach((item) => {
-        const name = item; // You can modify this to get the actual name based on the item if needed
-        const photoUrl = `img/photos2/${item}.JPG`; // Assuming photos are named after the items
+        const name = item;
+        const photoUrl = `img/photos2/${item}.JPG`;
 
         const itemDiv = document.createElement('div');
-        itemDiv.innerHTML = `
-        <img id="photos" src="${photoUrl}" alt="${name}" height="400" width="300"><br>
-        <style>
-        
-        @keyframes fadeOut {
-            0% {
-              opacity: 0;
-            }
-            100% {
-              opacity: 1;
-            }
-          }
 
-        #photos {
-            border-bottom-left-radius: 50px;
-            border-bottom-right-radius: 50px;
-            border-top-left-radius: 50px;
-            border-top-right-radius: 50px;
-            justify-content: center;
-            box-shadow: 3px 3px 10px black;
-            opacity: 0;
-            animation: fadeOut 5s ease-in-out forwards; 
-        }
-        </style>
-        
+        itemDiv.innerHTML = `
+            <img id="photos" src="${photoUrl}" alt="${name}" height="400" width="300"
+                 onerror="this.style.display='none'; this.parentNode.innerHTML='<h2 style=\'font-size:45px;font-weight:bold;text-align:center;margin-top:80px;\'>${name}</h2>';">
+            
+            <style>
+                @keyframes fadeOut {
+                    0% { opacity: 0; }
+                    100% { opacity: 1; }
+                }
+
+                #photos {
+                    border-radius: 50px;
+                    justify-content: center;
+                    box-shadow: 3px 3px 10px black;
+                    opacity: 0;
+                    animation: fadeOut 5s ease-in-out forwards; 
+                }
+            </style>
         `;
+
         resultContainer.appendChild(itemDiv);
     });
 }
