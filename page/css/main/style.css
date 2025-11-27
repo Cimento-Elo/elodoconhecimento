@@ -1,6 +1,6 @@
-/* ===========================================
-   RESET E VARIÁVEIS (ORIGINAL)
-=========================================== */
+/* ===========================
+   SEU CSS ORIGINAL INALTERADO
+=========================== */
 
 * {
     padding: 0;
@@ -15,16 +15,12 @@
     --cor-letras02: #2CBA80;  
 }
 
-html, body {
-    width: 100vw;
-    height: 100vh;
+html,
+body {
+    width: 1365px;
+    height: 860px;;
     background-color: var(--cor-fundo2);
-    overflow-x: hidden;
 }
-
-/* ===========================================
-   LAYOUT PRINCIPAL (RESTAURADO)
-=========================================== */
 
 main {
     position: relative;
@@ -42,12 +38,8 @@ main {
     height: 100vh;
     left: 400px;
     top: 0px;
-    opacity: 50%;
+    opacity: 50%;    
 }
-
-/* ===========================================
-   ÁREA DO FORMULÁRIO (RESTAURADO)
-=========================================== */
 
 #sort {
     display: flex;
@@ -76,20 +68,18 @@ form {
     border-style: none;
     gap: 50px;
     background-color: white;
-    border-radius: 45px;
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
     box-shadow: 3px 3px 10px black;
 }
 
 fieldset ul {
     padding-top: 15px;
-    text-align: left;
+    text-align: Left;
 }
 
-li { list-style: none; padding: 3px; }
-
-fieldset label { cursor: pointer; }
-
-/* Botão – Restaurado */
 .bton {
     position: relative;
     top: 60px;
@@ -100,33 +90,44 @@ fieldset label { cursor: pointer; }
     font-size: 25px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: var(--cor-letras01);
-    border-radius: 35px;
+    border: none;
+    border-top-right-radius: 35px;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    border-bottom-left-radius: 35px;
 }
 
 .bton:hover {
     color: black;
     font-size: 30px;
-    background: linear-gradient(45deg,black 10%,var(--cor-letras02),black);
-    transition: 0.6s;   
-    box-shadow: 3px 3px 10px #2CBA80;
-    cursor: pointer;      
-} 
-
-.bton:active {
+    background: linear-gradient(
+        45deg,
+        black 10%,
+        var(--cor-letras02),        
+        black        
+        );
+        transition: 0.6s;   
+        box-shadow: 3px 3px 10px #2CBA80;
+        cursor: pointer;      
+    } 
+    
+.bton:active{
     color: white;
-    background: linear-gradient(45deg,black 10%,var(--cor-fundo2),black);
+    background: linear-gradient(
+        45deg,
+        black 10%,
+        var(--cor-fundo2),        
+        black        
+        );
 }
 
-/* CHECKBOX */
-input[type=checkbox] { display: none; }
-input[type=checkbox]:checked + label:before {
-    content: "✔";  
-    color: var(--cor-letras02);  
-}
+li {list-style:none;padding:3px;}
+fieldset label {cursor:pointer;}
 
-/* ===========================================
-   ÁREA DOS SORTEADOS (ONDE FICAM AS FOTOS)
-=========================================== */
+#capa {width:50%;}
+
+input[type=checkbox]{display:none;}
+input[type=checkbox]:checked+label:before{content:"\2713";color:var(--cor-letras02);}
 
 #result {
     position: relative;
@@ -136,40 +137,52 @@ input[type=checkbox]:checked + label:before {
 	z-index: 1;
 }
 
-/* FOTO + NOME — FUNCIONANDO 100% */
-.personBox {
+h3 {text-align:center;}
+
+#contador {
+    font-size: 100px;
+    top: 300px;
     position: relative;
-    display: inline-block;
-    margin: 25px;
-    animation: fadeIn 2s forwards;
+    color: var(--cor-letras02);   
+    z-index: 1;
 }
 
-.photo {
-    height: 400px;
-    width: 300px;
-    border-radius: 45px;
-    box-shadow: 3px 3px 15px rgba(0,0,0,0.7);
-    opacity: 0;
-    animation: fadeIn 2s forwards;
+/* ================================
+   🔥 A PARTIR DAQUI — NOVO CÓDIGO
+================================ */
+
+.personBox{
+    position:relative;
+    display:inline-block;
+    margin:20px;
+    animation:fadeIn 1.5s forwards;
 }
 
-/* 🔥 Nome agora SEMPRE aparece */
-.personName {
-    position: absolute;
-    bottom: 15px;
-    width: 100%;
-    text-align: center;
-    font-size: 34px;
-    font-weight: 900;
-    color: #fff;
-    text-shadow: 0px 0px 15px black;
-    opacity: 0;
-    animation: fadeIn 2s forwards;
-    z-index: 9999;
+.photo{
+    height:400px;
+    width:300px;
+    border-radius:50px;
+    box-shadow:3px 3px 10px black;
+    opacity:0;
+    animation:fadeIn 1.5s forwards;
 }
 
-/* animação */
-@keyframes fadeIn {
-    0% { opacity: 0; transform: scale(0.9); }
-    100% { opacity: 1; transform: scale(1); }
+/* O nome AGORA APARECE SEMPRE */
+.personName{
+    position:absolute;
+    bottom:15px;
+    width:100%;
+    text-align:center;
+    font-size:34px;
+    font-weight:bold;
+    color:white;
+    text-shadow:0 0 12px black;
+    opacity:0;
+    animation:fadeIn 1.5s forwards;
+    z-index:9999;
+}
+
+@keyframes fadeIn{
+    0%{opacity:0;transform:scale(0.9);}
+    100%{opacity:1;transform:scale(1);}
 }
