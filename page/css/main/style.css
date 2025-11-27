@@ -1,7 +1,3 @@
-/* ===========================
-   SEU CSS ORIGINAL INALTERADO
-=========================== */
-
 * {
     padding: 0;
     margin: 0;
@@ -22,6 +18,9 @@ body {
     background-color: var(--cor-fundo2);
 }
 
+
+/* main style */
+
 main {
     position: relative;
     left: 70px;
@@ -30,6 +29,8 @@ main {
     justify-content: center;
     width: 1365px;
     height: 860px;
+    
+    
 }
 
 #fundo {
@@ -41,6 +42,8 @@ main {
     opacity: 50%;    
 }
 
+/* form style */
+
 #sort {
     display: flex;
     flex-direction: row;
@@ -48,7 +51,6 @@ main {
     width: 50%;
     height: 1000px;
 }
-
 form {
     width: 600px;
     height: 100vh;
@@ -111,23 +113,38 @@ fieldset ul {
         cursor: pointer;      
     } 
     
-.bton:active{
-    color: white;
-    background: linear-gradient(
-        45deg,
+    .bton:active{
+        color: white;
+        background: linear-gradient(
+            45deg,
         black 10%,
         var(--cor-fundo2),        
         black        
         );
+    }
+    
+    
+    li {
+        list-style: none;
+        padding: 3px;
+    }
+    
+    fieldset label {
+        cursor: pointer;
+    }
+
+    #capa {
+        width: 50%;
 }
 
-li {list-style:none;padding:3px;}
-fieldset label {cursor:pointer;}
+input[type=checkbox] {
+    display: none;
+}
 
-#capa {width:50%;}
-
-input[type=checkbox]{display:none;}
-input[type=checkbox]:checked+label:before{content:"\2713";color:var(--cor-letras02);}
+input[type=checkbox]:checked + label:before {
+    content: "\2713";  
+    color: var(--cor-letras02);     
+}
 
 #result {
     position: relative;
@@ -135,9 +152,12 @@ input[type=checkbox]:checked+label:before{content:"\2713";color:var(--cor-letras
 	left: 30px;
 	top: 45px;
 	z-index: 1;
+	/* box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.651); */
 }
 
-h3 {text-align:center;}
+h3 {
+    text-align: center;
+}
 
 #contador {
     font-size: 100px;
@@ -147,52 +167,101 @@ h3 {text-align:center;}
     z-index: 1;
 }
 
-/* ================================
-   🔥 A PARTIR DAQUI — NOVO CÓDIGO
-================================ */
+/* ================================================================
+   🔥 ESTILO DO RESULTADO DO SORTEIO — ADICIONADO SEM ALTERAR O ORIGINAL
+================================================================ */
 
-.personBox{
-    position:relative;
-    display:inline-block;
-    margin:20px;
-    animation:fadeIn 1.5s forwards;
+.personBox {
+    position: relative;
+    display: inline-block;
+    margin-top: 25px;
 }
 
-.photo{
-    height:400px;
-    width:300px;
-    border-radius:50px;
-    box-shadow:3px 3px 10px black;
-    opacity:0;
-    animation:fadeIn 1.5s forwards;
+/* foto carregada */
+.photo {
+    width: 300px;
+    height: 400px;
+    border-radius: 45px;
+    box-shadow: 3px 3px 10px black;
+    animation: fadeIn 1.5s ease-in-out forwards;
+    opacity: 0;
 }
 
-/* O nome AGORA APARECE SEMPRE */
-.personName{
-    position:absolute;
-    bottom:15px;
-    width:100%;
-    text-align:center;
-    font-size:34px;
-    font-weight:bold;
-    color:white;
-    text-shadow:0 0 12px black;
-    opacity:0;
-    animation:fadeIn 1.5s forwards;
-    z-index:9999;
-}
-
-@keyframes fadeIn{
-    0%{opacity:0;transform:scale(0.9);}
-    100%{opacity:1;transform:scale(1);}
-}
-
-/* POSIÇÃO DO RESULTADO — IGUAL AO ORIGINAL (Direita) */
-#result {
+/* 🔥 nome agora aparece SEMPRE sobre a foto */
+.personName {
     position: absolute;
-    right: 60px;        /* 🔥 Mantém o sorteio à direita */
-    top: 80px;
-    width: 530px;
-    z-index: 2;
+    bottom: 18px;
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0px 0px 14px black;
+    z-index: 10;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
 }
 
+/* animação aplicada em foto + nome */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+
+/* header style 
+header {
+    width: 1346px;
+    height: 114px;
+    text-align: center;
+}*/
+
+/*
+#img_header {
+    display: inline-block;
+    position: relative;    
+}*/
+
+/*
+#img_header label {
+    position: absolute;
+    top: 40px;
+    width: 1346px;
+    color: var(--cor-letras01);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+*/
+
+/*
+#sorteados {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    top: 30px;
+    animação para os nomes aparecerem 
+}*/
+
+/*
+.orador1, .orador2 {
+    font-size: 28px ;
+    text-align: center;
+    border: none;
+    background:none;
+    color: black;
+}*/
+
+/*
+#o01, #o02 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.651);
+    width: 280px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}*/
