@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>ELO DO CONHECIMENTO — SORTEIO</title>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+<div id="bg"></div>
+<div id="bg-overlay"></div>
+
+<div class="page">
+
+    <header>
+        <svg class="logo-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 42 Q30 10 45 42" stroke="#2CBA80" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <path d="M10 38 Q30 6 50 38" stroke="rgba(44,186,128,.4)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <line x1="8" y1="42" x2="52" y2="42" stroke="#2CBA80" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <p class="eyebrow">Cimento Elo</p>
+        <h1>Sorteio dos Oradores</h1>
+        <p class="subtitle">Elo do Conhecimento</p>
+        <div class="header-line"></div>
+    </header>
+
+    <div class="main-grid">
+
+        <!-- Coluna esquerda: lista de participantes -->
+        <div class="panel">
+            <p class="panel-label">Participantes</p>
+
+            <div class="sel-row">
+                <p class="sel-count">Selecionados: <span id="selCount">0</span> / 13</p>
+                <button class="toggle-all" onclick="toggleAll()" id="toggleAllBtn">Selecionar todos</button>
+            </div>
+
+            <fieldset>
+                <ul>
+                    <li><input id="c02" type="checkbox" name="item" value="GABRIEL MARCELINO"   /><label for="c02"><img class="avatar-thumb" src="img/photos/GABRIEL_MARCELINO.jpg"   alt="GABRIEL MARCELINO">GABRIEL MARCELINO</label></li>
+                    <li><input id="c03" type="checkbox" name="item" value="CURT LUEDERS"        /><label for="c03"><img class="avatar-thumb" src="img/photos/CURT_LUEDERS.jpg"         alt="CURT LUEDERS">CURT LUEDERS</label></li>
+                    <li><input id="c04" type="checkbox" name="item" value="ELIANDRA ALMEIDA"    /><label for="c04"><img class="avatar-thumb" src="img/photos/ELIANDRA_ALMEIDA.jpg"     alt="ELIANDRA ALMEIDA">ELIANDRA ALMEIDA</label></li>
+                    <li><input id="c05" type="checkbox" name="item" value="JOSÉ RAIMUNDO"       /><label for="c05"><img class="avatar-thumb" src="img/photos/JOSE_RAIMUNDO.jpg"        alt="JOSÉ RAIMUNDO">JOSÉ RAIMUNDO</label></li>
+                   <!-- <li><input id="c06" type="checkbox" name="item" value="LUDYMILLA ALVES"     /><label for="c06"><img class="avatar-thumb" src="img/photos/LUDYMILLA_ALVES.jpg"      alt="LUDYMILLA ALVES">LUDYMILLA ALVES</label></li> -->
+                    <li><input id="c07" type="checkbox" name="item" value="MARCELO BARROS"      /><label for="c07"><img class="avatar-thumb" src="img/photos/MARCELO_BARROS.jpg"       alt="MARCELO BARROS">MARCELO BARROS</label></li>
+                    <li><input id="c08" type="checkbox" name="item" value="MARCELO JOSÉ"        /><label for="c08"><img class="avatar-thumb" src="img/photos/MARCELO_JOSE.jpg"         alt="MARCELO JOSÉ">MARCELO JOSÉ</label></li>
+                    <li><input id="c09" type="checkbox" name="item" value="MARCELO COSTA"       /><label for="c09"><img class="avatar-thumb" src="img/photos/MARCELO_COSTA.jpg"        alt="MARCELO COSTA">MARCELO COSTA</label></li>
+                    <li><input id="c11" type="checkbox" name="item" value="RAULISON MONTENEGRO" /><label for="c11"><img class="avatar-thumb" src="img/photos/RAULISON_MONTENEGRO.jpg"  alt="RAULISON MONTENEGRO">RAULISON MONTENEGRO</label></li>
+                    <li><input id="c12" type="checkbox" name="item" value="RAYANE SUERDA"       /><label for="c12"><img class="avatar-thumb" src="img/photos/RAYANE_SUERDA.jpg"        alt="RAYANE SUERDA">RAYANE SUERDA</label></li>
+                    <li><input id="c13" type="checkbox" name="item" value="THIAGO MEIRELES"     /><label for="c13"><img class="avatar-thumb" src="img/photos/THIAGO_MEIRELES.jpg"      alt="THIAGO MEIRELES">THIAGO MEIRELES</label></li>
+                    <li><input id="c14" type="checkbox" name="item" value="PEDRO ALCANTARA"     /><label for="c14"><img class="avatar-thumb" src="img/photos/PEDRO_ALCANTARA.jpg"      alt="PEDRO ALCANTARA">PEDRO ALCANTARA</label></li>
+                    <li><input id="c15" type="checkbox" name="item" value="CLÁUDIO MARCELO"     /><label for="c15"><img class="avatar-thumb" src="img/photos/CLAUDIO_MARCELO.jpg"      alt="CLÁUDIO MARCELO">CLÁUDIO MARCELO</label></li>
+                </ul>
+            </fieldset>
+
+            <div class="btn-wrap">
+                <input class="bton" onclick="sortRandomly()" type="button" value="✦ SORTEAR ORADOR ✦" />
+            </div>
+        </div>
+
+        <!-- Coluna direita: resultado e histórico -->
+        <div id="result-panel">
+            <div id="result">
+                <div class="result-placeholder">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                        <circle cx="24" cy="24" r="22" stroke="white" stroke-width="2"/>
+                        <path d="M16 24l5 5 11-10" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Selecione os participantes<br>e clique em Sortear</span>
+                </div>
+            </div>
+
+            <div id="history-section" style="display:none" class="history-wrap">
+                <p class="panel-label">Histórico do dia</p>
+                <div class="history-list" id="historyList"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="javascript/sort.js"></script>
+</body>
+</html>
