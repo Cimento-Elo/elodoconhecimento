@@ -4,7 +4,7 @@ const photos = {
     "CURT LUEDERS":        "img/photos/CURT_LUEDERS.jpg",
     "ELIANDRA ALMEIDA":    "img/photos/ELIANDRA_ALMEIDA.jpg",
     "JOSÉ RAIMUNDO":       "img/photos/JOSE_RAIMUNDO.jpg",
-    "LUDYMILLA ALVES":     "img/photos/LUDYMILLA_ALVES.jpg",
+    "MAGNO NASCIMENTO":    "img/photos/MAGNO_NASCIMENTO.jpg",
     "MARCELO BARROS":      "img/photos/MARCELO_BARROS.jpg",
     "MARCELO JOSÉ":        "img/photos/MARCELO_JOSE.jpg",
     "MARCELO COSTA":       "img/photos/MARCELO_COSTA.jpg",
