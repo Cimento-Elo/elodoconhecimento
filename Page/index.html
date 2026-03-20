@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>ELO DO CONHECIMENTO — SORTEIO</title>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+<div id="bg"></div>
+<div id="bg-overlay"></div>
+
+<div class="page">
+
+    <header>
+        <svg class="logo-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 42 Q30 10 45 42" stroke="#2CBA80" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <path d="M10 38 Q30 6 50 38" stroke="rgba(44,186,128,.4)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <line x1="8" y1="42" x2="52" y2="42" stroke="#2CBA80" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <p class="eyebrow">Cimento Elo</p>
+        <h1>Sorteio dos Oradores</h1>
+        <p class="subtitle">Elo do Conhecimento</p>
+        <div class="header-line"></div>
+    </header>
+
+    <div class="main-grid">
+
+        <!-- Coluna esquerda: lista -->
+        <div class="panel">
+            <p class="panel-label">Participantes</p>
+            <div class="sel-row">
+                <p class="sel-count">Selecionados: <span id="selCount">0</span> / 34</p>
+                <button class="toggle-all" onclick="toggleAll()" id="toggleAllBtn">Selecionar todos</button>
+            </div>
+
+            <fieldset>
+                <div class="list-grid">
+                    <!-- Coluna 1 -->
+                    <ul>
+                        <li><input id="p01" type="checkbox" name="item" value="Andre Lima"          /><label for="p01"><img class="avatar-thumb" src="img/photos/DEFAULT.jpg"           alt="Andre Lima">Andre Lima</label></li>
+                        <li><input id="p02" type="checkbox" name="item" value="Anderson Pereira"    /><label for="p02"><img class="avatar-thumb" src="img/photos/ANDERSON_PEREIRA.jpg"  alt="Anderson Pereira">Anderson Pereira</label></li>
+                        <li><input id="p03" type="checkbox" name="item" value="Assis Cosme"         /><label for="p03"><img class="avatar-thumb" src="img/photos/ASSIS_COSME.jpg"        alt="Assis Cosme">Assis Cosme</label></li>
+                        <li><input id="p04" type="checkbox" name="item" value="Adriano Santos"      /><label for="p04"><img class="avatar-thumb" src="img/photos/DEFAULT.jpg"           alt="Adriano Santos">Adriano Santos</label></li>
+                        <li><input id="p05" type="checkbox" name="item" value="Bruno Medeiros"      /><label for="p05"><img class="avatar-thumb" src="img/photos/BRUNO_MEDEIROS.jpg"    alt="Bruno Medeiros">Bruno Medeiros</label></li>
+                        <li><input id="p06" type="checkbox" name="item" value="Cristina Farache"    /><label for="p06"><img class="avatar-thumb" src="img/photos/CRISTINA_FARACHE.jpg"  alt="Cristina Farache">Cristina Farache</label></li>
+                        <li><input id="p07" type="checkbox" name="item" value="Cleber Dias"         /><label for="p07"><img class="avatar-thumb" src="img/photos/CLEBER_DIAS.jpg"       alt="Cleber Dias">Cleber Dias</label></li>
+                        <li><input id="p08" type="checkbox" name="item" value="Curt Lueders"        /><label for="p08"><img class="avatar-thumb" src="img/photos/CURT_LUEDERS.jpg"      alt="Curt Lueders">Curt Lueders</label></li>
+                        <li><input id="p09" type="checkbox" name="item" value="Eliandra Almeida"    /><label for="p09"><img class="avatar-thumb" src="img/photos/ELIANDRA_ALMEIDA.jpg"  alt="Eliandra Almeida">Eliandra Almeida</label></li>
+                        <li><input id="p10" type="checkbox" name="item" value="Edson Mendes"        /><label for="p10"><img class="avatar-thumb" src="img/photos/EDSON_MENDES.jpg"      alt="Edson Mendes">Edson Mendes</label></li>
+                        <li><input id="p11" type="checkbox" name="item" value="Erika Araujo"        /><label for="p11"><img class="avatar-thumb" src="img/photos/DEFAULT.jpg"           alt="Erika Araujo">Erika Araujo</label></li>
+                        <li><input id="p12" type="checkbox" name="item" value="Fernanda Bezerra"    /><label for="p12"><img class="avatar-thumb" src="img/photos/DEFAULT.jpg"           alt="Fernanda Bezerra">Fernanda Bezerra</label></li>
+                        <li><input id="p13" type="checkbox" name="item" value="Fernando Arthur"     /><label for="p13"><img class="avatar-thumb" src="img/photos/FERNANDO_ARTHUR.jpg"   alt="Fernando Arthur">Fernando Arthur</label></li>
+                        <li><input id="p14" type="checkbox" name="item" value="Flávio Campelo"      /><label for="p14"><img class="avatar-thumb" src="img/photos/FLAVIO_CAMPELO.jpg"    alt="Flávio Campelo">Flávio Campelo</label></li>
+                        <li><input id="p15" type="checkbox" name="item" value="Gilliano Nascimento" /><label for="p15"><img class="avatar-thumb" src="img/photos/DEFAULT.jpg"           alt="Gilliano Nascimento">Gilliano Nascimento</label></li>
+                        <li><input id="p16" type="checkbox" name="item" value="Isabelle Raniele"    /><label for="p16"><img class="avatar-thumb" src="img/photos/DEFAULT.jpg"           alt="Isabelle Raniele">Isabelle Raniele</label></li>
+                        <li><input id="p17" type="checkbox" name="item" value="Janymara Rosane"     /><label for="p17"><img class="avatar-thumb" src="img/photos/DEFAULT.jpg"           alt="Janymara Rosane">Janymara Rosane</label></li>
+                    </ul>
+                    <!-- Coluna 2 -->
+                    <ul>
+                        <li><input id="p18" type="checkbox" name="item" value="João Paulo"          /><label for="p18"><img class="avatar-thumb" src="img/photos/JOAO_PAULO.jpg"        alt="João Paulo">João Paulo</label></li>
+                        <li><input id="p19" type="checkbox" name="item" value="José Lucas"          /><label for="p19"><img class="avatar-thumb" src="img/photos/JOSE_LUCAS.jpg"        alt="José Lucas">José Lucas</label></li>
+                        <li><input id="p20" type="checkbox" name="item" value="Leonardo Barreto"    /><label for="p20"><img class="avatar-thumb" src="img/photos/DEFAULT.jpg"           alt="Leonardo Barreto">Leonardo Barreto</label></li>
+                        <li><input id="p21" type="checkbox" name="item" value="Luis Manoel"         /><label for="p21"><img class="avatar-thumb" src="img/photos/DEFAULT.jpg"           alt="Luis Manoel">Luis Manoel</label></li>
+                        <li><input id="p22" type="checkbox" name="item" value="Luandson Dantas"     /><label for="p22"><img class="avatar-thumb" src="img/photos/DEFAULT.jpg"           alt="Luandson Dantas">Luandson Dantas</label></li>
+                        <li><input id="p23" type="checkbox" name="item" value="Marcelo José"        /><label for="p23"><img class="avatar-thumb" src="img/photos/MARCELO_JOSE.jpg"      alt="Marcelo José">Marcelo José</label></li>
+                        <li><input id="p24" type="checkbox" name="item" value="Marcelo Barros"      /><label for="p24"><img class="avatar-thumb" src="img/photos/MARCELO_BARROS.jpg"    alt="Marcelo Barros">Marcelo Barros</label></li>
+                        <li><input id="p25" type="checkbox" name="item" value="Mayane Sousa"        /><label for="p25"><img class="avatar-thumb" src="img/photos/DEFAULT.jpg"           alt="Mayane Sousa">Mayane Sousa</label></li>
+                        <li><input id="p26" type="checkbox" name="item" value="Nadja Lopes"         /><label for="p26"><img class="avatar-thumb" src="img/photos/DEFAULT.jpg"           alt="Nadja Lopes">Nadja Lopes</label></li>
+                        <li><input id="p27" type="checkbox" name="item" value="Nixon Aquino"        /><label for="p27"><img class="avatar-thumb" src="img/photos/NIXON_AQUINO.jpg"      alt="Nixon Aquino">Nixon Aquino</label></li>
+                        <li><input id="p28" type="checkbox" name="item" value="Patricia Araujo"     /><label for="p28"><img class="avatar-thumb" src="img/photos/DEFAULT.jpg"           alt="Patricia Araujo">Patricia Araujo</label></li>
+                        <li><input id="p29" type="checkbox" name="item" value="Paulo Eduardo"       /><label for="p29"><img class="avatar-thumb" src="img/photos/PAULO_EDUARDO.jpg"     alt="Paulo Eduardo">Paulo Eduardo</label></li>
+                        <li><input id="p30" type="checkbox" name="item" value="Renata Oliveira"     /><label for="p30"><img class="avatar-thumb" src="img/photos/RENATA_OLIVEIRA.jpg"   alt="Renata Oliveira">Renata Oliveira</label></li>
+                        <li><input id="p31" type="checkbox" name="item" value="Renato Abner"        /><label for="p31"><img class="avatar-thumb" src="img/photos/RENATO_ABNER.jpg"      alt="Renato Abner">Renato Abner</label></li>
+                        <li><input id="p32" type="checkbox" name="item" value="Rudy Santos"         /><label for="p32"><img class="avatar-thumb" src="img/photos/RUDY_SANTOS.jpg"       alt="Rudy Santos">Rudy Santos</label></li>
+                        <li><input id="p33" type="checkbox" name="item" value="Tâmara Castro"       /><label for="p33"><img class="avatar-thumb" src="img/photos/TAMARA_CASTRO.jpg"     alt="Tâmara Castro">Tâmara Castro</label></li>
+                        <li><input id="p34" type="checkbox" name="item" value="Virginia Torres"     /><label for="p34"><img class="avatar-thumb" src="img/photos/DEFAULT.jpg"           alt="Virginia Torres">Virginia Torres</label></li>
+                    </ul>
+                </div>
+            </fieldset>
+
+            <div class="btn-wrap">
+                <input class="bton" onclick="sortRandomly()" type="button" value="✦ SORTEAR ORADOR ✦" />
+            </div>
+        </div>
+
+        <!-- Coluna direita: resultado -->
+        <div id="result-panel">
+            <div id="result">
+                <div class="result-placeholder">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                        <circle cx="24" cy="24" r="22" stroke="white" stroke-width="2"/>
+                        <path d="M16 24l5 5 11-10" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Selecione os participantes<br>e clique em Sortear</span>
+                </div>
+            </div>
+
+            <div id="history-section" style="display:none" class="history-wrap">
+                <p class="panel-label">Histórico do dia</p>
+                <div class="history-list" id="historyList"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="javascript/sort.js"></script>
+</body>
+</html>
