@@ -4,6 +4,7 @@ const DEFAULT_PHOTO = "img/photos/DEFAULT.jpg";
 const photos = {
     "Andre Lima":           DEFAULT_PHOTO,
     "Anderson Pereira":     "img/photos/ANDERSON_PEREIRA.jpg",
+    "Anderson Andrade":     DEFAULT_PHOTO,
     "Assis Cosme":          "img/photos/ASSIS_COSME.jpg",
     "Adriano Santos":       DEFAULT_PHOTO,
     "Bruno Medeiros":       "img/photos/BRUNO_MEDEIROS.jpg",
@@ -19,7 +20,6 @@ const photos = {
     "Gilliano Nascimento":  DEFAULT_PHOTO,
     "Isabelle Raniele":     DEFAULT_PHOTO,
     "Janymara Rosane":      DEFAULT_PHOTO,
-    "João Paulo":           "img/photos/JOAO_PAULO.jpg",
     "José Lucas":           "img/photos/JOSE_LUCAS.jpg",
     "Leonardo Barreto":     DEFAULT_PHOTO,
     "Luis Manoel":          DEFAULT_PHOTO,
@@ -33,12 +33,13 @@ const photos = {
     "Paulo Eduardo":        "img/photos/PAULO_EDUARDO.jpg",
     "Renata Oliveira":      "img/photos/RENATA_OLIVEIRA.jpg",
     "Renato Abner":         "img/photos/RENATO_ABNER.jpg",
+    "Rodrigo Goncalves":    DEFAULT_PHOTO,
     "Rudy Santos":          "img/photos/RUDY_SANTOS.jpg",
     "Tâmara Castro":        "img/photos/TAMARA_CASTRO.jpg",
     "Virginia Torres":      DEFAULT_PHOTO
 };
 
-const TOTAL = 34;
+const TOTAL = 35;
 const drawHistory = [];
 
 // ── Atualiza contador ──
@@ -123,3 +124,4 @@ function renderHistory() {
             <strong>${h.names}</strong>
         </div>`).join('');
 }
+
