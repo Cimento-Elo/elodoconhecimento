@@ -312,6 +312,7 @@ li input[type="checkbox"]:checked + label::before {
     justify-content: center; color: var(--green);
     font-weight: 700; flex-shrink: 0;
 }
+
 /* ── FOOTER ── */
 footer {
     position: relative;
@@ -337,3 +338,4 @@ footer strong {
 .footer-sep {
     color: var(--card-border);
 }
+
