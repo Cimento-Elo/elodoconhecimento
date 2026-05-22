@@ -28,6 +28,7 @@ const photos = {
     "Marcelo Barros":       "img/photos/MARCELO_BARROS.jpg",
     "Mayane Sousa":         DEFAULT_PHOTO,
     "Nadja Lopes":          DEFAULT_PHOTO,
+    "Nayara Gomes":         DEFAULT_PHOTO,
     "Nixon Aquino":         "img/photos/NIXON_AQUINO.jpg",
     "Patricia Araujo":      DEFAULT_PHOTO,
     "Paulo Eduardo":        "img/photos/PAULO_EDUARDO.jpg",
@@ -39,7 +40,7 @@ const photos = {
     "Virginia Torres":      DEFAULT_PHOTO
 };
 
-const TOTAL = 35;
+const TOTAL = 36;
 const drawHistory = [];
 
 // ── Atualiza contador ──
@@ -124,4 +125,3 @@ function renderHistory() {
             <strong>${h.names}</strong>
         </div>`).join('');
 }
-
