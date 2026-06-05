@@ -21,8 +21,10 @@ const photos = {
     "Isabelle Raniele":     DEFAULT_PHOTO,
     "Janymara Rosane":      DEFAULT_PHOTO,
     "José Lucas":           "img/photos/JOSE_LUCAS.jpg",
+    "Jeferson":             DEFAULT_PHOTO,
     "Leonardo Barreto":     DEFAULT_PHOTO,
     "Luis Manoel":          DEFAULT_PHOTO,
+    "Luthyere":             DEFAULT_PHOTO,
     "Luandson Dantas":      DEFAULT_PHOTO,
     "Marcelo José":         "img/photos/MARCELO_JOSE.jpg",
     "Marcelo Barros":       "img/photos/MARCELO_BARROS.jpg",
@@ -40,7 +42,7 @@ const photos = {
     "Virginia Torres":      DEFAULT_PHOTO
 };
 
-const TOTAL = 36;
+const TOTAL = 38;
 const drawHistory = [];
 
 // ── Atualiza contador ──
