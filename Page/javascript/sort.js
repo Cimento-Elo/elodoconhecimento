@@ -37,12 +37,13 @@ const photos = {
     "Renata Oliveira":      "img/photos/RENATA_OLIVEIRA.jpg",
     "Renato Abner":         "img/photos/RENATO_ABNER.jpg",
     "Rodrigo Goncalves":    DEFAULT_PHOTO,
+    "Rurien":               DEFAULT_PHOTO,
     "Rudy Santos":          "img/photos/RUDY_SANTOS.jpg",
     "Tâmara Castro":        "img/photos/TAMARA_CASTRO.jpg",
     "Virginia Torres":      DEFAULT_PHOTO
 };
 
-const TOTAL = 38;
+const TOTAL = 39;
 const drawHistory = [];
 
 // ── Atualiza contador ──
