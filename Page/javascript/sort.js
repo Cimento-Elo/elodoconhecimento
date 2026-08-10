@@ -4,14 +4,15 @@ const DEFAULT_PHOTO = "img/photos/DEFAULT.jpg";
 const photos = {
     "Andre Lima":           DEFAULT_PHOTO,
     "Anderson Pereira":     "img/photos/ANDERSON_PEREIRA.jpg",
-    "Anderson Andrade":     DEFAULT_PHOTO,
     "Assis Cosme":          "img/photos/ASSIS_COSME.jpg",
     "Adriano Santos":       DEFAULT_PHOTO,
     "Bruno Medeiros":       "img/photos/BRUNO_MEDEIROS.jpg",
     "Cristina Farache":     "img/photos/CRISTINA_FARACHE.jpg",
+    "Darc Lays":            DEFAULT_PHOTO,
     "Cleber Dias":          "img/photos/CLEBER_DIAS.jpg",
     "Curt Lueders":         "img/photos/CURT_LUEDERS.jpg",
     "Eliandra Almeida":     "img/photos/ELIANDRA_ALMEIDA.jpg",
+    "Edivânio Erasmo":      DEFAULT_PHOTO,
     "Edson Mendes":         "img/photos/EDSON_MENDES.jpg",
     "Erika Araujo":         DEFAULT_PHOTO,
     "Fernanda Bezerra":     DEFAULT_PHOTO,
@@ -43,7 +44,7 @@ const photos = {
     "Virginia Torres":      DEFAULT_PHOTO
 };
 
-const TOTAL = 39;
+const TOTAL = 40;
 const drawHistory = [];
 
 // ── Atualiza contador ──
