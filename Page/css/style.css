@@ -223,7 +223,7 @@ li input[type="checkbox"]:checked + label::before {
     align-items: center; text-align: center;
     animation: popIn .45s cubic-bezier(.34,1.56,.64,1) both;
     position: relative; overflow: hidden;
-} 
+}
 .winner-card::before {
     content: ''; position: absolute; inset: 0;
     background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(44,186,128,.12), transparent 70%);
