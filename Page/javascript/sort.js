@@ -17,6 +17,7 @@ const photos = {
     "Erika Araujo":         DEFAULT_PHOTO,
     "Fernanda Bezerra":     DEFAULT_PHOTO,
     "Fernando Arthur":      "img/photos/FERNANDO_ARTHUR.jpg",
+    "Fernando Veloso":      DEFAULT_PHOTO,
     "Flávio Campelo":       "img/photos/FLAVIO_CAMPELO.jpg",
     "Gilliano Nascimento":  DEFAULT_PHOTO,
     "Isabelle Raniele":     DEFAULT_PHOTO,
@@ -44,7 +45,7 @@ const photos = {
     "Virginia Torres":      DEFAULT_PHOTO
 };
 
-const TOTAL = 40;
+const TOTAL = 41;
 const drawHistory = [];
 
 // ── Atualiza contador ──
