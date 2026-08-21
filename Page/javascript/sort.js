@@ -94,6 +94,41 @@ function winnerCard(name, label, drawNumber) {
         </div>`;
 }
 
+// ── Gera HTML de um card de vencedor para o MODAL ──
+function modalWinnerCard(name, label, drawNumber) {
+    const photoSrc = photos[name] || DEFAULT_PHOTO;
+    return `
+        <div class="modal-winner-card">
+            <div class="modal-ring modal-ring-1"></div>
+            <div class="modal-ring modal-ring-2"></div>
+            <p class="modal-badge">🎙 ${label}</p>
+            <img class="modal-photo" src="${photoSrc}" alt="${name}" onerror="this.src='${DEFAULT_PHOTO}'">
+            <p class="modal-name">${name}</p>
+            <p class="modal-draw-num">Sorteio #${drawNumber}</p>
+        </div>`;
+}
+
+// ── Abre o modal ──
+function abrirModal(html) {
+    document.getElementById('modalWinners').innerHTML = html;
+    document.getElementById('modal-overlay').classList.add('modal-active');
+    document.body.style.overflow = 'hidden';
+}
+
+// ── Fecha o modal ──
+function fecharModal() {
+    document.getElementById('modal-overlay').classList.remove('modal-active');
+    document.body.style.overflow = '';
+}
+
+// ── Fecha ao clicar fora do box ──
+function closeModal(e) {
+    if (e.target === document.getElementById('modal-overlay')) fecharModal();
+}
+
+// ── Fecha com ESC ──
+document.addEventListener('keydown', e => { if (e.key === 'Escape') fecharModal(); });
+
 // ── Sorteio principal — sorteia 2 participantes ──
 function sortRandomly() {
     const checked = [...document.querySelectorAll('input[name="item"]:checked')];
@@ -112,11 +147,18 @@ function sortRandomly() {
     drawHistory.push({ n: drawNumber, names: `${name1} & ${name2}` });
     renderHistory();
 
+    // Atualiza painel lateral (mantém estrutura original)
     resultDiv.innerHTML = `
         <div class="winners-grid">
             ${winnerCard(name1, '1º Orador', drawNumber)}
             ${winnerCard(name2, '2º Orador', drawNumber)}
         </div>`;
+
+    // Abre modal com destaque em tela cheia
+    const modalHtml =
+        modalWinnerCard(name1, '1º Orador', drawNumber) +
+        modalWinnerCard(name2, '2º Orador', drawNumber);
+    abrirModal(modalHtml);
 }
 
 // ── Histórico ──
