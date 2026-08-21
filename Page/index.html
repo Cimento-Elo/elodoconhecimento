@@ -71,7 +71,7 @@
                         <li><input id="p23" type="checkbox" name="item" value="Marcelo José"        /><label for="p23"><img class="avatar-thumb" src="img/photos/MARCELO_JOSE.jpg"      alt="Marcelo José">Marcelo José</label></li>
                         <li><input id="p24" type="checkbox" name="item" value="Marcelo Barros"      /><label for="p24"><img class="avatar-thumb" src="img/photos/MARCELO_BARROS.jpg"    alt="Marcelo Barros">Marcelo Barros</label></li>
                         <li><input id="p25" type="checkbox" name="item" value="Mayane Sousa"        /><label for="p25"><img class="avatar-thumb" src="img/photos/DEFAULT.jpg"           alt="Mayane Sousa">Mayane Sousa</label></li>
-                        <!-- <li><input id="p26" type="checkbox" name="item" value="Nadja Lopes"         /><label for="p26"><img class="avatar-thumb" src="img/photos/DEFAULT.jpg"           alt="Nadja Lopes">Nadja Lopes</label></li> -->
+                        <li><input id="p26" type="checkbox" name="item" value="Nadja Lopes"         /><label for="p26"><img class="avatar-thumb" src="img/photos/DEFAULT.jpg"           alt="Nadja Lopes">Nadja Lopes</label></li>
                         <li><input id="p37" type="checkbox" name="item" value="Nayara Gomes"        /><label for="p37"><img class="avatar-thumb" src="img/photos/DEFAULT.jpg"           alt="Nayara Gomes">Nayara Gomes</label></li>
                         <li><input id="p27" type="checkbox" name="item" value="Nixon Aquino"        /><label for="p27"><img class="avatar-thumb" src="img/photos/NIXON_AQUINO.jpg"      alt="Nixon Aquino">Nixon Aquino</label></li>
                         <li><input id="p28" type="checkbox" name="item" value="Patricia Araujo"     /><label for="p28"><img class="avatar-thumb" src="img/photos/DEFAULT.jpg"           alt="Patricia Araujo">Patricia Araujo</label></li>
@@ -119,7 +119,18 @@
     <span>Desenvolvido por <strong>Ademar Santiago</strong></span>
 </footer>
 
+<!-- ── MODAL RESULTADO ── -->
+<div id="modal-overlay" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal-box">
+        <button class="modal-close" onclick="fecharModal()">&#x2715;</button>
+        <p class="modal-eyebrow">&#x2726; Oradores Sorteados &#x2726;</p>
+        <div class="modal-winners" id="modalWinners"></div>
+        <button class="modal-btn-novo" onclick="fecharModal()">Novo Sorteio</button>
+    </div>
+</div>
+
 <script src="javascript/sort.js"></script>
 <script>document.getElementById('ano').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+
