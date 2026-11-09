@@ -1,4 +1,9 @@
 'use strict';
+/* =========================================================
+   ELO DO CONHECIMENTO — SORTEIO DOS ORADORES
+   Fotos e total são lidos direto do HTML (fonte única).
+   Para adicionar alguém, basta incluir um <li> no index.html.
+   ========================================================= */
 const DEFAULT_PHOTO = "img/photos/DEFAULT.jpg";
 const STORAGE_KEY   = "elo-sorteio-historico";
 const REDUCED_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
